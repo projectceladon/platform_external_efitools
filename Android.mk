@@ -21,16 +21,16 @@ EFITOOLS_STATIC_LIBRARIES := libcrypto_static2
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := sign-efi-sig-list
-LOCAL_MODULE_HOST_OS := linux windows
-LOCAL_LDLIBS_windows := $(EFITOOLS_LDLIBS_windows)
+LOCAL_MODULE_HOST_OS := linux
+#LOCAL_LDLIBS_windows := $(EFITOOLS_LDLIBS_windows)
 LOCAL_LDLIBS_linux := $(EFITOOLS_LDLIBS_linux)
 LOCAL_CXX_STL := $(EFITOOLS_CXX_STL)
 
 LOCAL_STATIC_LIBRARIES := $(EFITOOLS_STATIC_LIBRARIES)
 LOCAL_SRC_FILES_linux := sign-efi-sig-list.c lib/guid.c
 LOCAL_CFLAGS := $(EFITOOLS_CFLAGS)
-LOCAL_SRC_FILES_windows := sign-efi-sig-list.c lib/guid.c strptime.c
-LOCAL_CFLAGS_windows := $(LOCAL_CFLAGS) -DHAVE_LOCALE_H
+#LOCAL_SRC_FILES_windows := sign-efi-sig-list.c lib/guid.c strptime.c
+#LOCAL_CFLAGS_windows := $(LOCAL_CFLAGS) -DHAVE_LOCALE_H
 LOCAL_C_INCLUDES := $(EFITOOLS_C_INCLUDES)
 
 include $(BUILD_HOST_EXECUTABLE)
