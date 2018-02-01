@@ -38,8 +38,8 @@ include $(BUILD_HOST_EXECUTABLE)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := cert-to-efi-sig-list
-LOCAL_MODULE_HOST_OS := linux windows
-LOCAL_LDLIBS_windows := $(EFITOOLS_LDLIBS_windows)
+LOCAL_MODULE_HOST_OS := linux
+#LOCAL_LDLIBS_windows := $(EFITOOLS_LDLIBS_windows)
 LOCAL_LDLIBS_linux := $(EFITOOLS_LDLIBS_linux)
 LOCAL_CXX_STL := $(EFITOOLS_CXX_STL)
 
